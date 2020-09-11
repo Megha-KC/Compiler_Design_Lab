@@ -62,8 +62,6 @@ int main() {
 
     printf("Enter the number of states: ");
     scanf("%d", &numOfStates);
-    getchar();
-
 
     printf("Enter the number of alphabets: ");
     scanf("%d", &numOfAlphabets);
@@ -77,14 +75,10 @@ int main() {
 
     printf("Enter the number of transistions: ");
     scanf("%d", &numOfTransitions);
-    getchar();
 
     printf("\nNOTE: State number begins at 1\nEnter transition in the format: CurrentStateNumber Alphabet NextStateNumber\n");
     for (i=0; i<numOfTransitions; i++) {
         scanf("%d %c%d", &currStateNum, &alphabet, &nextStateNum);
-        // getchar();
-        // printf("\n %c", alphabet);
-
         createTransitionTable(currStateNum, alphabet, nextStateNum);
     }
 
